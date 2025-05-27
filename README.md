@@ -40,9 +40,10 @@ This project is designed to help developers and DevOps engineers:
     
         kubectl get pods -o wide
 
-# How Node Affinity Works in This Project 
+## How Node Affinity Works in This Project 
 
 **1. node-affinity.yaml file**
+
 Node affinity rules are defined within the Pod spec to control where the pod can be scheduled, based on node labels and existing pod locations.
 
 Two types of affinity rules are used:
@@ -57,11 +58,11 @@ Two types of affinity rules are used:
     This helps group related pods together, improving locality and potentially performance.
 
 **2. Combined the Manifests**
-The combined-manifest.yaml merges the Deployment configuration with:
 
-Node affinity rules
-Tolerations (to allow scheduling on tainted nodes)
-Resource requests and limits
-By using a combined file:
+The combined-manifest.yaml merges the Deployment configuration with:
+- Node affinity rules
+- Tolerations (to allow scheduling on tainted nodes)
+- Resource requests and limits
+- By using a combined file:
    All configuration can be applied in a single step, making it easier to deploy and manage.
 
